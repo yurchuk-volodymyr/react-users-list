@@ -1,0 +1,8 @@
+@each $name, $value in $colorMap {
+	.text-#{$name} {
+		color: #{$value}
+	}
+	.bg-#{$name} {
+		background-color: #{$value};
+	}
+}

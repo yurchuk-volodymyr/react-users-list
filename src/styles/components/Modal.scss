@@ -1,0 +1,17 @@
+.app-modal {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($black, .3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__inner {
+		background-color: $white;
+		border-radius: $border-radius;
+		width: 350px;
+	}
+}

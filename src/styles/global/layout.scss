@@ -1,0 +1,115 @@
+@use 'sass:math';
+
+.container {
+	margin: 0 auto;
+	padding: 0 $spacer*6;
+	width: 100%;
+	max-width: $container-width-basic
+}
+
+// create set of padding and margin classes
+@for $i from 0 through 12 {
+	$space: $i * $spacer;
+	.pa-#{$i} {
+		padding: $space !important;
+	}
+	.px-#{$i} {
+		padding-left: $space !important;
+		padding-right: $space !important;
+	}
+	.py-#{$i} {
+		padding-top: $space !important;
+		padding-bottom: $space !important;
+	}
+	.ma-#{$i} {
+		margin: $space !important;
+	}
+	.mx-#{$i} {
+		margin-left: $space !important;
+		margin-right: $space !important;
+	}
+	.my-#{$i} {
+		margin-top: $space !important;
+		margin-bottom: $space !important;
+	}
+	.ma-n#{$i} {
+		margin: -1 * $space !important;
+	}
+	.mx-n#{$i} {
+		margin-left: -1 * $space !important;
+		margin-right: -1 * $space !important;
+	}
+	.my-n#{$i} {
+		margin-top: -1 * $space !important;
+		margin-bottom: -1 * $space !important;
+	}
+
+	@each $alias, $direction in $directionsMap {
+		.p#{$alias}-#{$i} {
+			padding-#{$direction}: $space !important;
+		}
+		.m#{$alias}-#{$i} {
+			margin-#{$direction}: $space !important;
+		}
+		.m#{$alias}-n#{$i} {
+			margin-#{$direction}: -1 * $space !important;
+		}
+	}
+}
+@each $alias, $direction in $directionsMap {
+	.m#{$alias}-auto {
+		margin-#{$direction}: auto !important
+	}
+}
+
+// rows and cols
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 auto;
+	margin: 0 -4*$spacer
+}
+.col {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+	padding: 3*$spacer 4*$spacer;
+}
+.col-auto {
+	flex: 0 0 auto;
+	padding: 3*$spacer 4*$spacer;
+	width: auto;
+	max-width: 100%;
+}
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		flex: 0 0 math.div(100%, 12) * $i;
+		max-width: math.div(100%, 12) * $i;
+		padding: 3*$spacer 4*$spacer;
+	}
+}
+
+// flex
+.d-flex {
+	display: flex !important;
+}
+.d-flex-vertical {
+	display: flex !important;
+	flex-direction: column;
+}
+.align-center {
+	align-items: center !important;
+}
+.justify-center {
+	justify-content: center !important;
+}
+.justify-start {
+	justify-content: flex-start !important;
+}
+
+.d-block {
+	display: block !important;
+}
+.text-center {
+	text-align: center !important;
+}

@@ -1,0 +1,16 @@
+//global
+@import './global/variables.scss';
+@import './global/reset.scss';
+@import './global/base.scss';
+@import './global/layout.scss';
+@import './global/typography.scss';
+@import './global/color.scss';
+@import './global/icons.scss';
+
+// components
+@import './components/Navbar.scss';
+@import './components/Buttons.scss';
+@import './components/Footer.scss';
+@import './components/Card.scss';
+@import './components/UserList.scss';
+@import './components/Modal.scss';

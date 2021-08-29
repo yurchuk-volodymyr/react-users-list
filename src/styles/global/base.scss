@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: $body-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container-center {
+  display: grid;
+  align-items: center;
+  min-height: 100%;
+}

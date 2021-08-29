@@ -1,0 +1,12 @@
+.user-list {
+	.col-4 {
+		@media (max-width: 768px) {
+			flex: 0 0 calc(100% / 2);
+			max-width: calc(100% / 2);
+		}
+		@media (max-width: 576px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}

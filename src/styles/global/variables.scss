@@ -1,0 +1,18 @@
+@import './variables_colors.scss';
+
+$body-font-family: 'Open Sans', sans-serif;
+$border-radius: 4px;
+$border: 1px solid $border-color;
+$line-height-root: 1.25;
+
+$spacer: 4px;
+$container-width-basic: 1280px;
+
+$transition-duration: .25s;
+$transition-duration-short: .15s;
+$transition-duration-long: .4s;
+$transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+$transition: $transition-duration $transition-timing-function;
+
+$directions: 'top' 'right' 'bottom' 'left';
+$directionsMap: ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left');
